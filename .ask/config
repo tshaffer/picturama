@@ -6,11 +6,11 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "f80ece64dba9b16787bb7bf0767aa788"
+          "eTag": "5200af5d6e96ea5151ee1a656f05d33c"
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "0a38d8d34b8f1d9d7e7f4b4fc72d9ce1"
+            "eTag": "b745e6745adf2e8e570d9fdddbe2a8e0"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-picturama-default",
             "handler": "index.handler",
-            "revisionId": "29cc897d-ed06-4ef2-9f79-87d5014aed6f",
+            "revisionId": "8518432f-84b4-4088-b173-d3563b6b2929",
             "runtime": "nodejs8.10"
           }
         ]

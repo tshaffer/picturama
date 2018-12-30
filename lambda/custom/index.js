@@ -18,13 +18,28 @@ const LaunchRequestHandler = {
   },
 };
 
+const PicturamaListAlbumsIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'PicturamaListAlbumsIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'picturama list albums!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('picturama list albums', speechText)
+      .getResponse();
+  },
+}
+
 const PicturamaNamedAlbumIntent = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
       && handlerInput.requestEnvelope.request.intent.name === 'PicturamaNamedAlbumIntent';
   },
   handle(handlerInput) {
-    const speechText = 'picturama named album!';
+    const speechText = 'display album named ' + handlerInput.requestEnvelope.request.intent.slots.name.value;
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -39,7 +54,8 @@ const PicturamaDatedAlbumIntent = {
       && handlerInput.requestEnvelope.request.intent.name === 'PicturamaDatedAlbumIntent';
   },
   handle(handlerInput) {
-    const speechText = 'picturama dated album!';
+    // const speechText = 'picturama dated album!';
+    const speechText = 'display album from ' + handlerInput.requestEnvelope.request.intent.slots.photosDate.value;
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -110,6 +126,7 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
+    PicturamaListAlbumsIntent,
     PicturamaNamedAlbumIntent,
     PicturamaDatedAlbumIntent,
     HelpIntentHandler,

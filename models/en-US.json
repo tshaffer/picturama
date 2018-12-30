@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "picturama",
+      "invocationName": "picture history",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -14,6 +14,16 @@
         {
           "name": "AMAZON.StopIntent",
           "samples": []
+        },
+        {
+          "name": "PicturamaListAlbumsIntent",
+          "samples": [
+            "tell me what albums I have",
+            "what are all my albums",
+            "what are my albums",
+            "albums please"
+          ]
+
         },
         {
           "name": "PicturamaNamedAlbumIntent",
@@ -37,8 +47,8 @@
               }
           ],
           "samples": [
-            "dated album {photosDate}",
-            "show me photos from date {photosDate}"
+            "flibbet {photosDate}",
+            "show me photos from flibbet {photosDate}"
           ]
         }
       ]
