@@ -64,6 +64,22 @@ const PicturamaDatedAlbumIntent = {
   },
 }
 
+const PicturamaVacationAlbumIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'PicturamaVacationAlbumIntent';
+  },
+  handle(handlerInput) {
+    // const speechText = 'picturama vacation album!';
+    const speechText = 'display vacation album ' + handlerInput.requestEnvelope.request.intent.slots.vacation.value;
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('picturama vacation album', speechText)
+      .getResponse();
+  },
+}
+
 const HelpIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -129,6 +145,7 @@ exports.handler = skillBuilder
     PicturamaListAlbumsIntent,
     PicturamaNamedAlbumIntent,
     PicturamaDatedAlbumIntent,
+    PicturamaVacationAlbumIntent,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
