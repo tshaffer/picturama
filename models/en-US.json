@@ -18,12 +18,12 @@
         {
           "name": "PicturamaListAlbumsIntent",
           "samples": [
+            "list my albums",
             "tell me what albums I have",
             "what are all my albums",
             "what are my albums",
             "albums please"
           ]
-
         },
         {
           "name": "PicturamaNamedAlbumIntent",
@@ -47,8 +47,8 @@
               }
           ],
           "samples": [
-            "flibbet {photosDate}",
-            "show me photos from flibbet {photosDate}"
+            "dated {photosDate}",
+            "show me photos from {photosDate}"
           ]
         }
       ]
