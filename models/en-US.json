@@ -51,6 +51,18 @@
           ]
         },
         {
+          "name": "PicturamaEventAlbumIntent",
+          "slots": [
+              {
+                "name": "event",
+                "type": "event"
+              }
+          ],
+          "samples": [
+            "event album {event}"
+          ]
+        },
+        {
           "name": "PicturamaDatedAlbumIntent",
           "slots": [
               {
@@ -109,7 +121,33 @@
                     }
                 }
             ]
+        },
+        {
+          "name": "event",
+          "values": [
+              {
+                  "name": {
+                      "value": "birthday"
+                  }
+              },
+              {
+                  "name": {
+                      "value": "wedding"
+                  }
+              },
+              {
+                  "name": {
+                      "value": "bar mitzvah"
+                  }
+              },
+              {
+                  "name": {
+                      "value": "bat mitzvah"
+                  }
+              }
+          ]
         }
+
       ]
     }
   }
