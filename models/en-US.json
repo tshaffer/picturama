@@ -30,12 +30,8 @@
           ]
         },
         {
-          "name": "shafferotoIntent",
+          "name": "PicturamaNamedAlbumIntent",
           "slots": [
-              {
-                  "name": "photosDate",
-                  "type": "AMAZON.DATE"
-              },
               {
                 "name": "name",
                 "type": "AMAZON.US_FIRST_NAME"
@@ -43,9 +39,20 @@
           ],
           "samples": [
             "named album {name}",
-            "dated album {photosDate}",
-            "show me photos from date {photosDate}",
             "show me photos from album {name}"
+          ]
+        },
+        {
+          "name": "PicturamaDatedAlbumIntent",
+          "slots": [
+              {
+                  "name": "photosDate",
+                  "type": "AMAZON.DATE"
+              }
+          ],
+          "samples": [
+            "dated album {photosDate}",
+            "show me photos from date {photosDate}"
           ]
         },
         {

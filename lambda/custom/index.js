@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    const speechText = 'Welcome to the picturama!';
+    const speechText = 'Welcome to picturama!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -17,6 +17,36 @@ const LaunchRequestHandler = {
       .getResponse();
   },
 };
+
+const PicturamaNamedAlbumIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'PicturamaNamedAlbumIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'picturama named album!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('picturama named album', speechText)
+      .getResponse();
+  },
+}
+
+const PicturamaDatedAlbumIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'PicturamaDatedAlbumIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'picturama dated album!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('picturama dated album', speechText)
+      .getResponse();
+  },
+}
 
 const HelloWorldIntentHandler = {
   canHandle(handlerInput) {
@@ -95,6 +125,8 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
+    PicturamaNamedAlbumIntent,
+    PicturamaDatedAlbumIntent,
     HelloWorldIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,

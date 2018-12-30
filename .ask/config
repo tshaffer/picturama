@@ -10,7 +10,7 @@
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "67efd3a39e9429841317ad438c656050"
+            "eTag": "9df01f43c5e3968d5699db9b507af871"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-picturama-default",
             "handler": "index.handler",
-            "revisionId": "90732ca1-47c0-4a4f-bd87-58e78921c938",
+            "revisionId": "9af61804-2e7d-489e-bdaa-295394e11475",
             "runtime": "nodejs8.10"
           }
         ]
