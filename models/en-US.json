@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "hello world",
+      "invocationName": "picturama",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -14,6 +14,39 @@
         {
           "name": "AMAZON.StopIntent",
           "samples": []
+        },
+        {
+          "name": "HelloIntent",
+          "slots": [
+              {
+                  "name": "name",
+                  "type": "AMAZON.US_FIRST_NAME"
+              }
+          ],
+          "samples": [
+              "my name is {name}",
+              "hello",
+              "hi"
+          ]
+        },
+        {
+          "name": "shafferotoIntent",
+          "slots": [
+              {
+                  "name": "photosDate",
+                  "type": "AMAZON.DATE"
+              },
+              {
+                "name": "name",
+                "type": "AMAZON.US_FIRST_NAME"
+              }
+          ],
+          "samples": [
+            "named album {name}",
+            "dated album {photosDate}",
+            "show me photos from date {photosDate}",
+            "show me photos from album {name}"
+          ]
         },
         {
           "name": "HelloWorldIntent",
