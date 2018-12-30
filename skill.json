@@ -5,8 +5,7 @@
         "en-US": {
           "summary": "Sample Short Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
+            "picturama",
             "help"
           ],
           "name": "picturama",
