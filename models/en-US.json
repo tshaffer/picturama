@@ -16,20 +16,6 @@
           "samples": []
         },
         {
-          "name": "HelloIntent",
-          "slots": [
-              {
-                  "name": "name",
-                  "type": "AMAZON.US_FIRST_NAME"
-              }
-          ],
-          "samples": [
-              "my name is {name}",
-              "hello",
-              "hi"
-          ]
-        },
-        {
           "name": "PicturamaNamedAlbumIntent",
           "slots": [
               {
@@ -53,12 +39,6 @@
           "samples": [
             "dated album {photosDate}",
             "show me photos from date {photosDate}"
-          ]
-        },
-        {
-          "name": "HelloWorldIntent",
-          "samples": [
-            "hello"
           ]
         }
       ]
